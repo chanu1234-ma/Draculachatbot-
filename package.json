@@ -1,23 +1,23 @@
 {
-  "name": "dracula-chat-bot",
+  "name": "Dracula chat bot",
   "version": "1.0.0",
-  "description": "Sinhala-English WhatsApp GPT AI bot using Node.js and Baileys",
+  "description": "A WhatsApp bot created using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --name dracula-chat-bot",
-    "stop": "pm2 stop dracula-chat-bot",
-    "restart": "pm2 restart dracula-chat-bot"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Draculabot",
+    "stop": "pm2 stop Draculabot",
+    "restart": "pm2 restart Draculabot"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "6.6.0",
     "@adiwajshing/keyed-db": "^0.2.4",
-    "axios": "^1.2.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "fs-extra": "^11.1.1",
-    "openai": "^4.26.0",
     "pino": "^7.0.5",
     "pm2": "^5.2.0",
+    "express": "latest",
+    "axios": "^1.2.5",
+    "google-translate-api": "^2.3.0",
+    "node-schedule": "^2.1.0",
+    "fs-extra": "^11.1.0",
     "path": "^0.12.7",
     "qrcode-terminal": "^0.12.0"
   }
