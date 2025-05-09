@@ -26,6 +26,12 @@ module.exports = {
     FOOTER: process.env.FOOTER || 'Dracula Bot © 2025',
     BOT_IMAGE: process.env.BOT_IMAGE || 'https://png.pngtree.com/png-clipart/20231017/original/pngtree-halloween-pumpkin-head-male-character-riding-a-flaming-horse-png-image_13279545.png',
 
-    ALIVE_IMG: process.env.ALIVE_IMG || 'https://i.imgur.com/DraculaImage.jpg',
-    ALIVE_MSG: process.env.ALIVE_MSG || '🧛‍♂️ Dracula Bot is Alive and Watching You at Midnight! 🌙',
+    ALIVE_IMG: process. env.ALIVE_IMG || 'https://i.imgur.com/DraculaImage.jpg',
+    ALIVE_MSG: process. env.ALIVE_MSG || '🧛‍♂️ Dracula Bot is Alive and Watching You at Midnight! 🌙',
+
+    // New AI-related fields
+    OPENAI_API_KEY: process. env.OPENAI_API_KEY || '',  // API Key for OpenAI
+    AI_MODEL: process.env.AI_MODEL || 'text-davinci-003',  // Default model (can be changed)
+    AI_TEMP: process.env.AI_TEMP || '0.7',  // Temperature for AI response generation (controls creativity)
+    AI_MAX_TOKENS: process. env.AI_MAX_TOKENS || '150',  // Max tokens for AI responses
 };
