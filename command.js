@@ -1,21 +1,18 @@
-var commands = [];
+const { cmd } = require('../lib/command');
 
-function cmd(info, func) {
-    var data = info;
-    data.function = func;
-    if (!data.dontAddCommandList) data.dontAddCommandList = false;
-    if (!info.desc) info.desc = '';
-    if (!data.fromMe) data.fromMe = false;
-    if (!info.category) data.category = 'dracula';
-    if (!info.filename) data.filename = __filename;
-    commands.push(data);
-    return data;
-}
-
-module.exports = {
-    cmd,
-    AddCommand: cmd,
-    Function: cmd,
-    Module: cmd,
-    commands,
-};
+cmd(
+  {
+    pattern: 'hi',
+    fromMe: false,
+    desc: 'Say hi with love ❤️',
+    category: 'chat',
+  },
+  async (message) => {
+    const reply = `හයි! 😊
+මම ඩ්‍රැකියුලා 😈
+ඔයාට මගෙන් ඕනෙ මොකක්ද?
+මිතුරන් වෙමුද? 💖`;
+    
+    await message.reply(reply);
+  }
+);
